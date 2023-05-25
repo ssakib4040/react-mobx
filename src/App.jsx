@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 import { makeAutoObservable } from "mobx";
 import { observer } from "mobx-react-lite";
@@ -24,11 +25,12 @@ const timer = new Timer();
 // A function component wrapped with `observer` will react
 // to any future change in an observable it used before.
 const App = () => (
-  <>
+  <div className="App">
+    <h2>ReactJS with mobX (Functional Component)</h2>
     <button onClick={() => timer.increment()}>Increment</button>
     {timer.value}
     <button onClick={() => timer.increment()}>Decrement</button>
-  </>
+  </div>
 );
 
 export default observer(App);
