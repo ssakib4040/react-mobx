@@ -27,9 +27,9 @@ const timer = new Timer();
 const App = () => (
   <div className="App">
     <h2>ReactJS with mobX (Functional Component)</h2>
-    <button onClick={() => timer.increment()}>Increment</button>
+    <button onClick={() => timer.decrement()}>Decrement</button>
     {timer.value}
-    <button onClick={() => timer.increment()}>Decrement</button>
+    <button onClick={() => timer.increment()}>Increment</button>
   </div>
 );
 
